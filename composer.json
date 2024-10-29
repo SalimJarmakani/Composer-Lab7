@@ -1,0 +1,17 @@
+{
+  "name": "salim/app",
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Salim Jarmakani",
+      "email": "salimjar01@gmail.com"
+    }
+  ],
+  "require": {
+    "monolog/monolog": "^3.7"
+  }
+}
