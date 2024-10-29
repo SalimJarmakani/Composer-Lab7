@@ -4,6 +4,7 @@ namespace App;
 
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
+use Monolog\Level;
 
 class AppLogger
 {
@@ -13,8 +14,8 @@ class AppLogger
     {
         $this->logger = new Logger('appLogger');
 
-        $this->logger->pushHandler(new StreamHandler(__DIR__ . "/../logs/app.log", LOG_DEBUG));
-        $this->logger->pushHandler(new StreamHandler(__DIR__ . "/../logs/error.log", LOG_ERR));
+        $this->logger->pushHandler(new StreamHandler(__DIR__ . "/../logs/app.log", Level::Info));
+        $this->logger->pushHandler(new StreamHandler(__DIR__ . "/../logs/error.log", Level::Error));
     }
 
     public function logInfo($message)
